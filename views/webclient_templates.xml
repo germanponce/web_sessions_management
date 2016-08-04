@@ -3,7 +3,8 @@
 
         <template id="web_login" inherit_id="web.login">
             <xpath expr="//p[@t-if='error']" position="replace">
-                <p class="alert alert-danger" t-if="error">
+                <p class="alert alert-danger" style="text-align: left;
+    white-space: normal; word-wrap: break-word;" t-if="error">
                     <t t-esc="error" />
                     <br />
                     <t t-esc="reason1" />

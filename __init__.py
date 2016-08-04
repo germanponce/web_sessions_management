@@ -22,11 +22,8 @@
 #
 ##############################################################################
 
-import res_users
-import ir_sessions
-import main
 import res_groups
-import ir_http
-
-def post_load():
-    import http
+import main
+import http
+import ir_sessions
+import res_users

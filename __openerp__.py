@@ -23,11 +23,11 @@
 ##############################################################################
 
 {
-    'name': 'Odoo Web Sessions Management Rules',
-    'version': '1.0',
+    'name': 'TKOBR - Odoo Web Sessions Management Rules',
+    'version': '1.053',
     'category': 'Tools',
     'sequence': 15,
-    'summary': 'Manage Users Login Rules in Odoo.',
+    'summary': 'Complete! session timeout, kill. No multisessions. Login by calendar (week day hours).',
     'description': """
 # Manage Users Login Rules in Odoo\n
 ===========================\n
@@ -48,29 +48,32 @@ One can do following:\n
 2. Users can close related active session;\n
 3. Users can choose to close all sessions except current one.\n
 NOTE: Admin has no restrictions""",
-    'author': 'ThinkOpen Solutions Brasil, IT-Projects LLC, Ivan Yelizariev',
+    'author': 'ThinkOpen Solutions Brasil, Ivan Yelizariev',
     'website': 'http://www.tkobr.com',
+    #'price': 19.99,
+    #'currency': 'EUR',
     'depends': [
                 'base',
                 'resource',
                 'web',
-                ],
+    ],
     'data': [
-        'security/security.xml',
         'security/ir.model.access.csv',
         'views/scheduler.xml',
         'views/res_users_view.xml',
         'views/res_groups_view.xml',
         'views/ir_sessions_view.xml',
         'views/webclient_templates.xml',
-        ],
+    ],
     'init': [],
     'demo': [],
     'update': [],
     'test': [],  # YAML files with tests
     'installable': True,
     'application': False,
-    'auto_install': False,  # If it's True, the modules will be auto-installed when all dependencies are installed
+    # If it's True, the modules will be auto-installed when all dependencies
+    # are installed
+    'auto_install': False,
     'certificate': '',
-    "post_load": 'post_load',
+    'reload': True,
 }

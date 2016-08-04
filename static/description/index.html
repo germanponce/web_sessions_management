@@ -1,13 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
         <div class="oe_span12">
             <div>
                 <ul>
-                    <h2 class="oe_slogan"><u>What You Get and Support</u></h2><br />
-                    <li><h4>All the <u><strong>login features are working</strong></u>. The ones marked with a [<strong style="color: green;">DONE</strong>], are complete and working well, and the ones as [<strong style="color: blue;">TODO</strong>] are in development or to be develop.</h4></li>
-                    <li><h4>Logout features in development.</h4></li>
+                    <h3 class="oe_slogan"><u>What You Get and Support</u></h3><br />
+                    <li><h4>The ones marked with a [<strong style="color: green;">DONE</strong>], are complete, and the ones as [<strong style="color: blue;">TODO</strong>] are in development.</h4></li>
                     <li><h4>We accept contributions to improve and review the code at <a href="https://github.com/thinkopensolutions/tkobr-addons">GITHUB</a>.</h4></li>
-                </ul><br />
+                </ul>
                 <h4 class="oe_slogan">support at <a href="emailto:sac@tkobr.com?subject=tko_web_sessions_management">sac@tkobr.com</a></h3>
             </div>
         </div>
@@ -18,7 +18,7 @@
     <div class="oe_row oe_spaced">
         <div class="oe_span12">
             <h2 class="oe_slogan">Manage Users Login Rules in Odoo</h2>
-            <h3 class="oe_slogan">Access Rules by Group or User and by Company</h3>
+            <h3 class="oe_slogan">Rules by Group or User and by Company</h3>
         </div>
         <div class="oe_span6">
             <div class="oe_row_img oe_centered">
@@ -30,10 +30,12 @@
             <p class="oe_mt32">
                 Define login rules by groups or single users, company dependent in a multicompany configuration.
                 <ol>
-                    <li>Allow or not multiple sign in of same user; [<strong style="color: green;">DONE</strong>]</li>
-                    <li>Define session timeouts; [<strong style="color: green;">DONE</strong>]</li>
-                    <li>Define a time/week calendar by day where users can login; [<strong style="color: green;">DONE</strong>]</li>
-                    <li>You can have user exceptions, overwriting group settings in user settings. The most restrict rule will be applied. [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Set a week calendar to define when users can login, by company; [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Restrict multiple sign in for same user, by company; [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Set user session timeout, by company; [<strong style="color: green;">DONE</strong>]</li>
+                    <li>You can define rules by group or user, definitions in users prevails over group ones. [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Admin user doesn't have calendar or multi-session restrictions, only timeout. [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Restrict accesses by client IPs. [<strong style="color: blue;">TODO</strong>]</li>
                 </ol>
             </p>
         </div>
@@ -48,7 +50,7 @@
         </div>
         <div class="oe_span6">
             <p class="oe_mt32">
-                Administrators can manage easily the open sessions, and have control of who is logged in, giving better view of users behaviours, improving overall security and control.<br/>
+                Administrators can manage easily the open sessions, and have control of who is logged in, from wich IP, giving better view of users behaviours, improving overall security and control.<br/>
                 Access it at Settings>Technical>Security menu.
                 <ol>
                     <li>Global sessions logs; [<strong style="color: green;">DONE</strong>]</li>
@@ -61,10 +63,13 @@
                         </ul>
                     </li>
                     <li>Close any active session. [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Show user login IP. [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Show user login IP Location using GeoIP library. [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Show unsuccessful login attempts reasons. [<strong style="color: green;">DONE</strong>]</li>
                     <li>Close all active sessions. [<strong style="color: blue;">TODO</strong>]</li>
-                    <li>Send email to users with active sessions. [<strong style="color: blue;">TODO</strong>]</li>
+                    <li>Dashboard with login/logout statistics. [<strong style="color: blue;">TODO</strong>]</li>
+                    <li>Send notification to users with active sessions. [<strong style="color: blue;">TODO</strong>]</li>
                 </ol>
-                <p><strong><strong>NOTE</strong>:</strong> admin user has no access restriction.</p>
             </p>
         </div>
         <div class="oe_span6">
@@ -93,8 +98,8 @@
             <p class="oe_mt32">
                 Every user can manage his own sessions from preferences, improving overall security:
                 <ol>
-                    <li>Users can see their own log rules to login. The most restrictive between group and user ones will be applied.<br/>(eg:. if a group defines 4 hours, and user define 30 minutes the session will expires in 30 minutes, <u>the earlier</u>); [<strong style="color: green;">DONE</strong>]</li>
-                    <li>Users can close related active session; [<strong style="color: blue;">TODO</strong>]</li>
+                    <li>Users can see their own logs in preferences; [<strong style="color: green;">DONE</strong>]</li>
+                    <li>Users can close their active sessions in preferences; [<strong style="color: green;">DONE</strong>]</li>
                     <li>Users can choose to close all sessions except current one. [<strong style="color: blue;">TODO</strong>]</li>
                 </ol>
             </p>
